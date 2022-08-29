@@ -8,7 +8,7 @@ export default function Navbar() {
       <nav className="header">
         <div className="logo--header">
           <img src={appLogo} alt="app logo" />
-          <h1>Space Travellers&apos; Hub</h1>
+          <h1>Space Travellers</h1>
         </div>
         <ul className="nav--all">
           <li><NavLink className="nav--item" exact to="/">Rockets </NavLink></li>
