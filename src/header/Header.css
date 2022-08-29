@@ -1,0 +1,20 @@
+.line {
+  display: flex;
+  height: 1rem;
+  border: solid 1px #222629;
+  background-color: #222629;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.brand > * {
+ margin: 0;
+}
