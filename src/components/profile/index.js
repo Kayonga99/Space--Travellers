@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Profile = () => (
-  <div>Profile in progress</div>
+  <h1>Profile in progress</h1>
 );
 
 export default Profile;

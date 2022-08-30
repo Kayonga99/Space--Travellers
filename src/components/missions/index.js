@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Missions = () => (
-  <div>Missions in progress</div>
+  <h1>Missions in progress</h1>
 );
 
 export default Missions;
