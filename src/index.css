@@ -21,17 +21,8 @@ h1 {
   margin: 0;
 }
 
-.logo--header img {
-  height: 70px;
-}
-
 .nav--all {
   list-style-type: none;
   display: flex;
   gap: 30px;
-}
-
-.line {
-  border-right: 1.5px solid grey;
-  padding-right: 30px;
 }

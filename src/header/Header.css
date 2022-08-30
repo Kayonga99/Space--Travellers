@@ -1,17 +1,29 @@
-.navbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #f5f5f5;
-  z-index: 9;
+.line {
+  display: flex;
+  height: 1rem;
+  border: solid 1px #222629;
+  background-color: #222629;
 }
 
-.nav {
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.brand > * {
+  margin: 0;
+}
+
+/* .nav {
   padding: 10px 10vw;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .logo {
   height: 60px;
