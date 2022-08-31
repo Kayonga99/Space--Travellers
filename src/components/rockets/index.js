@@ -20,7 +20,9 @@ const Rockets = () => {
     <>
       {rockets.map((rocket) => (
         <div key={rocket.id} className="rocket">
-          <img src={rocket.images} alt={rocket.name} />
+          <div>
+            <img src={rocket.images} alt={rocket.name} />
+          </div>
           <h3>{rocket.name}</h3>
           <p>{rocket.description}</p>
           {rocket.reserved ? <button type="button" id={rocket.id} onClick={(e) => cancelReseve(e.target.id)}>cancel</button> : <button type="button" id={rocket.id} onClick={(e) => handleReserve(e.target.id)}>Reserve</button>}
