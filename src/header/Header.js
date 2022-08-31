@@ -20,6 +20,7 @@ const Header = () => (
           <Nav.Link href="/profile">My Profile</Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      <hr className="hr" />
     </Container>
   </Navbar>
 );
