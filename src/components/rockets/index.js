@@ -11,8 +11,12 @@ const Rockets = () => {
     }
   }, [dispatch]);
   const handleReserve = (id) => {
+    console.log(id);
     dispatch(reserve(id));
-  }
+  };
+  const cancelReseve = (id) => {
+    dispatch(cancelResevertion(id));
+  };
   return (
     <>
       {rockets.map((rocket) => (
@@ -20,7 +24,7 @@ const Rockets = () => {
           <img src={rocket.images} alt={rocket.name} />
           <h3>{rocket.name}</h3>
           <p>{rocket.description}</p>
-          {rocket.reserved ? <button>Reserve</button> : <button>cancel</button>}
+          {rocket.reserved ? <button type="button" id={rocket.id} onClick={(e) => cancelReseve(e.target.id)}>cancel</button> : <button type="button" id={rocket.id} onClick={(e) => handleReserve(e.target.id)}>Reserve</button>}
         </div>
       ))}
     </>
