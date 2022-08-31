@@ -6,6 +6,6 @@
 }
 
 .brand {
-display: inline-flex;
-gap: 0.5em;
+  display: inline-flex;
+  gap: 0.5em;
 }
