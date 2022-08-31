@@ -39,10 +39,54 @@ export const fetchRockets = () => async (dispatch) => {
                 const {
                     flickr_images: images,
                     rocket_id: id,
+                    rocket_name: name,
+                    description,
+                    reserved = false,
                 } = rocket
+                return {
+                    id,
+                    images,
+                    name,
+                    description,
+                    reserved,
+                }
             })
         ))
     } catch(err) {
-        Error(err)
+dispatch(reserveFailed(err.message));
     }
 }
+
+const rocketReducer = (state= initialState, action) => {
+    switch(action.type){
+        case  GET_ROCKETS:
+            return {
+                ...state, rockets: action.payload
+            }
+        case FETCHING_ROCKETS_FAILED:
+            return {
+                ...state, error: action.payload
+            }
+        case RESERVE_ROCKET:
+            const currentState = state.rockets.map(rocket => {
+                if(rocket.id === action.payload){
+                    return {...rocket, reserved: !rocket.reserved}
+                }
+                return rocket
+            })
+            return {...state, rockets: currentState}
+        case CANCEL_REVERATION:
+            const cancelState = state.reserved.map(rocket => {
+                if(rocket.id === action.payload){
+                    return {...rocket, reserved: !rocket.reserved}
+                }
+                return rocket
+            })
+            return {...state, rocket: cancelState}
+        default:
+            return state
+    }
+        
+}
+
+export default rocketReducer;
