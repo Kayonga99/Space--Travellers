@@ -10,5 +10,25 @@ const initialState = {
 };
 
 const loadRockets = (rockets) => ({
-    type: GET_ROCKETS
+    type: GET_ROCKETS,
+    payload: rockets,
+})
+
+export const reserve = (id) => ({
+    type: RESERVE_ROCKET,
+    payload: id,
+})
+
+export const cancelResevertion = (id) => ({
+    type: CANCEL_REVERATION,
+    payload: id,
+})
+
+const reserveFailed = (id) => ({
+    type: FETCHING_ROCKETS_FAILED,
+    payload: id,
+})
+
+export const fetchRockets = () => async({
+    
 })
