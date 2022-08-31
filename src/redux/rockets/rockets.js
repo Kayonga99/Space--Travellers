@@ -29,6 +29,20 @@ const reserveFailed = (id) => ({
     payload: id,
 })
 
-export const fetchRockets = () => async({
-    
-})
+export const fetchRockets = () => async (dispatch) => {
+    try{
+        const response = await fetch(url)
+        const rockets = await response.json()
+
+        dispatch(loadRockets(
+            rockets.map(rocket => {
+                const {
+                    flickr_images: images,
+                    rocket_id: id,
+                } = rocket
+            })
+        ))
+    } catch(err) {
+        Error(err)
+    }
+}
