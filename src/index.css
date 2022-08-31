@@ -26,4 +26,6 @@
 .button {
   color: #fff;
   background: #1a1aff;
+  width: 114px;
+  border-radius: 5px;
 }
