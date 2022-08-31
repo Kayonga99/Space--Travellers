@@ -11,7 +11,6 @@ const Rockets = () => {
     }
   }, [dispatch]);
   const handleReserve = (id) => {
-    console.log(id);
     dispatch(reserve(id));
   };
   const cancelReseve = (id) => {
