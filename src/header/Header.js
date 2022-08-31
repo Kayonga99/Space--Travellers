@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => (
   <div>
     <Navbar bg="white" expand="lg">
-      <Container className="header">
+      <Container>
         <Navbar.Brand className="brand" href="#home">
           <img src="/assets/rocket-placeholder.png" width="30" height="30" alt="logo" />
           <h2> Space Travelers&rsquo;Hub</h2>

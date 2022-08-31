@@ -2,8 +2,8 @@
   width: 100%;
   background-color: black;
 }
-/* 
-.header {
-  display: flex;
-  flex-direction: column;
-} */
+
+.brand {
+display: inline-flex;
+gap: 0.5em;
+}
