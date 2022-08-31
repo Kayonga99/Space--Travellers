@@ -25,7 +25,8 @@
 
 .button {
   color: #fff;
-  background: #1a1aff;
+  background: #3434ff;
   width: 114px;
   border-radius: 5px;
+  border: 1px solid #fff;
 }
