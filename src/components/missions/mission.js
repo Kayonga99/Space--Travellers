@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Mission = (props) => {
-  const { mission } = props;
-  const { missionName, description, joined } = mission;
+  const { mission, handleClick } = props;
+  const {
+    missionId, missionName, description, joined,
+  } = mission;
 
   const status = joined ? 'Active Member' : 'NOT A MEMBER';
   const statusBtn = joined ? 'Leave Mission' : 'Join Mission';
@@ -14,10 +16,16 @@ const Mission = (props) => {
       <td>{missionName}</td>
       <td>{description}</td>
       <td className="statusContainer text-center align-middle">
-        <span className={`${joined && 'bg-info'} status`}>{status}</span>
+        <span className={`${joined ? 'bg-info' : 'bg-secondary'} status`}>{status}</span>
       </td>
       <td className="btnJoin text-center align-middle">
-        <button className={statusBtnClass} type="button">{statusBtn}</button>
+        <button
+          type="button"
+          className={statusBtnClass}
+          onClick={() => handleClick(missionId)}
+        >
+          {statusBtn}
+        </button>
       </td>
     </tr>
   );
@@ -27,4 +35,9 @@ export default Mission;
 
 Mission.propTypes = {
   mission: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
+};
+
+Mission.defaultProps = {
+  handleClick: () => { },
 };

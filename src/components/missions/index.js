@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Mission from './mission';
 import './missions.css';
 
-import { getMissionsAction } from '../../redux/missions/missionsSlice';
+import { getMissionsAction, switchMissionAction } from '../../redux/missions/missionsSlice';
 
 const Missions = () => {
   const missionState = useSelector((state) => state.missions.missions);
@@ -13,6 +13,10 @@ const Missions = () => {
   useEffect(() => {
     dispatch(getMissionsAction());
   }, []);
+
+  const handleClick = (e) => {
+    dispatch(switchMissionAction(e));
+  };
 
   return (
     <Table id="table" striped bordered hover>
@@ -28,6 +32,7 @@ const Missions = () => {
 
         {missionState.map((mission) => (
           <Mission
+            handleClick={handleClick}
             key={mission.missionId}
             mission={mission}
           />
