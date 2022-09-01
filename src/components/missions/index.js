@@ -1,45 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Mission from './mission';
 
-const missions = () => {
-  console.log('Wait');
+import { getMissionsAction } from '../../redux/missions/missionsSlice';
 
-  const BASE_URL = 'https://api.spacexdata.com/v3/missions';
+const Missions = () => {
+  const missionState = useSelector((state) => state.missions.missions);
+  const dispatch = useDispatch();
 
-  // const getMissions = async (url) => {
-  //   let data = await fetch(url);
-  //   data = await data.json();
-  //   const missionArray = [];
-  //   data.map((item) => missionArray.push({
-  //     mission_id: item.mission_id,
-  //     mission_name: item.mission_name,
-  //     description: item.description,
-  //   }));
-  //   return missionArray;
-  // };
-
-  const fetchMission = async (url) => {
-    let data = await fetch(url);
-    data = await data.json();
-    const missionArray = [];
-    data.map((item) => missionArray.push({
-      mission_id: item.mission_id,
-      mission_name: item.mission_name,
-      description: item.description,
-    }));
-    return missionArray || [];
-  };
-
-  const getMissionById = async (url, id) => {
-    const missionList = await fetchMission(url);
-    const mission = missionList.find((mission) => mission.mission_id === id);
-    return mission;
-  };
-
-  console.log(getMissionById(BASE_URL, 'F4F83DE'));
+  useEffect(() => {
+    dispatch(getMissionsAction());
+  }, []);
 
   return (
-    <div>missions</div>
+    <table>
+      <tr>
+        <th>Mission</th>
+        <th>Description</th>
+        <th>Status</th>
+      </tr>
+      {missionState.map((mission) => (
+        <Mission
+          key={mission.missionId}
+          mission={mission}
+        />
+      )) || []}
+    </table>
   );
 };
 
-export default missions;
+export default Missions;
