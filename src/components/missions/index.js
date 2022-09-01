@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
 import { useSelector, useDispatch } from 'react-redux';
 import Mission from './mission';
+import './missions.css';
 
 import { getMissionsAction } from '../../redux/missions/missionsSlice';
 
@@ -13,19 +15,26 @@ const Missions = () => {
   }, []);
 
   return (
-    <table>
-      <tr>
-        <th>Mission</th>
-        <th>Description</th>
-        <th>Status</th>
-      </tr>
-      {missionState.map((mission) => (
-        <Mission
-          key={mission.missionId}
-          mission={mission}
-        />
-      )) || []}
-    </table>
+    <Table id="table" striped bordered hover>
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {missionState.map((mission) => (
+          <Mission
+            key={mission.missionId}
+            mission={mission}
+          />
+        )) || []}
+      </tbody>
+
+    </Table>
   );
 };
 

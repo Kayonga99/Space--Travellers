@@ -1,0 +1,39 @@
+#table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: 1rem 4.5vw;
+  width: 90vw;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  border-width: 1px;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.status {
+  color: #fff;
+  background-color: #696969;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.statusContainer {
+  width: 10rem;
+}
+
+.joinBtn {
+  background-color: transparent;
+}
+
+.leaveBtn {
+  color: red;
+  border-color: red;
+  background-color: transparent;
+}

@@ -6,13 +6,19 @@ const Mission = (props) => {
   const { missionName, description, joined } = mission;
 
   const status = joined ? 'Active Member' : 'NOT A MEMBER';
+  const statusBtn = joined ? 'Leave Mission' : 'Join Mission';
+  const statusBtnClass = joined ? 'leaveBtn' : 'joinBtn';
 
   return (
     <tr>
       <td>{missionName}</td>
       <td>{description}</td>
-      <td>{status}</td>
-      <td>joined</td>
+      <td className="statusContainer text-center align-middle">
+        <span className={`${joined && 'bg-info'} status`}>{status}</span>
+      </td>
+      <td className="btnJoin text-center align-middle">
+        <button className={statusBtnClass} type="button">{statusBtn}</button>
+      </td>
     </tr>
   );
 };
