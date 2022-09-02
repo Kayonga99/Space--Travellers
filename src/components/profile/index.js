@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Css from './rockets.module.css';
 
 function Profile() {
   /* eslint-disable */ 
@@ -7,7 +8,7 @@ function Profile() {
   console.log(rockets);
   /* eslint-enable */
   return (
-    <div className="Profile">
+    <div className={Css.Profile}>
       <h3>Reserved Rockets</h3>
       {rockets.map((rocket) => (
         <div key={rocket.id}>

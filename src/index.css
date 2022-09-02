@@ -30,3 +30,8 @@
   border-radius: 5px;
   border: 1px solid #fff;
 }
+
+.Profile {
+  display: flex;
+  justify-content: flex-end;
+}
