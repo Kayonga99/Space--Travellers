@@ -1,6 +1,4 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-// import logger from 'redux-logger';
-// import thunk from 'redux-thunk';
 import rocketReducer from './rockets/rockets';
 
 const reducer = combineReducers({
