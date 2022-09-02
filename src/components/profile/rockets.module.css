@@ -1,6 +1,6 @@
 .Profile {
     display: flex;
-    margin-right: 10px;
+    margin-right: 20px;
     justify-content: flex-end;
     font-family: sans-serif;
 
@@ -22,8 +22,9 @@ flex-direction: column;
     font-weight: 500;
     list-style: none;
     border: 0.5px solid #6e6d6d;
-    width: 400px;
-padding: 12px;
+    width: 30em;
+    padding: 12px;
+    margin-right: 40px;
 }
 
 .h3 {
