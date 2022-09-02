@@ -1,4 +1,7 @@
 .Profile {
     display: flex;
     justify-content: flex-end;
+    margin-right: 10px;
+    font-family: sans-serif;
 }
+
