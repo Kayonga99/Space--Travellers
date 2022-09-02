@@ -1,9 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // Action types
-const JOIN_MISSION = 'missions/JOIN_MISSION/';
-const LEAVE_MISSION = 'missions/LEAVE_MISSION/';
 const GET_MISSIONS = 'missions/GET_MISSIONS';
+const SWITCH_JOIN = 'missions/SWITCH_JOIN';
 
 // Initial State
 const initialState = {
@@ -11,9 +10,9 @@ const initialState = {
   status: null,
 };
 
-const switchReserved = (state, id) => state.map((mission) => {
-  if (mission.id !== id) { return mission; }
-  return { ...state, joined: !mission.reserved };
+const switchReserved = (state, id) => state.missions.map((mission) => {
+  if (mission.missionId !== id) { return mission; }
+  return { ...mission, joined: !mission.joined };
 });
 
 const missionsReducer = (state = initialState, action) => {
@@ -28,15 +27,10 @@ const missionsReducer = (state = initialState, action) => {
         missions: action.payload,
         status: 'Missions fetched successfully',
       };
-    case `${JOIN_MISSION}fulfilled`:
+    case `${SWITCH_JOIN}`:
       return {
-        missions: switchReserved(state, action.payload.id),
-        status: 'Mission joined successfully',
-      };
-    case `${LEAVE_MISSION}fulfilled`:
-      return {
-        missions: switchReserved(state, action.payload.id),
-        status: 'Mission left successfully',
+        missions: switchReserved(state, action.payload),
+        status: 'Mission join switched successfully',
       };
     default:
       return state;
@@ -61,8 +55,6 @@ export const getMissionsAction = createAsyncThunk(GET_MISSIONS, async () => {
   return missionArray;
 });
 
-export const joinMissionAction = (id) => ({ type: JOIN_MISSION, payload: id });
-
-export const leaveMissionAction = (id) => ({ type: LEAVE_MISSION, payload: id });
+export const switchMissionAction = (id) => ({ type: SWITCH_JOIN, payload: id });
 
 export default missionsReducer;
