@@ -1,33 +1,31 @@
 .Profile {
-    display: flex;
-    margin-right: 20px;
-    justify-content: flex-end;
-    font-family: sans-serif;
-
+  display: flex;
+  margin-right: 20px;
+  justify-content: flex-end;
+  font-family: sans-serif;
 }
 
 .DivSep {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .profileDiv {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .liRocket {
-    font-size: 20px;
-    font-weight: 500;
-    list-style: none;
-    border: 0.5px solid #6e6d6d;
-    width: 30em;
-    padding: 12px;
-    margin-right: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  list-style: none;
+  border: 0.5px solid #6e6d6d;
+  width: 30em;
+  padding: 12px;
+  margin-right: 40px;
 }
 
 .h3 {
-    font-weight: 800;
+  font-weight: 800;
 }
- 
