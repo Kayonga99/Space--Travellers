@@ -7,7 +7,7 @@ function Profile() {
   console.log(rockets);
   /* eslint-enable */
   return (
-    <div>
+    <div className="Profile">
       <h3>Reserved Rockets</h3>
       {rockets.map((rocket) => (
         <div key={rocket.id}>
