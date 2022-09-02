@@ -1,12 +1,21 @@
-// import MissionProfile from './MissionProfile';
-import { render } from '@testing-library/react';
-import RocketProfile from './RocketProfile';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-const MyProfile = () => render(
-  <div className="profile-flex">
-    <RocketProfile />
-    {' '}
+function Profile() {
+  /* eslint-disable */ 
+  const rockets = useSelector((state) => state.rockets.rockets.filter(rocket => rocket.reserved));
+  console.log(rockets);
+  /* eslint-enable */
+  return (
+    <div>
+      <h3>Reserved Rockets</h3>
+      {rockets.map((rocket) => (
+        <div key={rocket.id}>
+          <h3>{rocket.name}</h3>
+        </div>
+      ))}
+    </div>
+  );
+}
 
-  </div>,
-);
-export default MyProfile;
+export default Profile;

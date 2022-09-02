@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import React from 'react';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <div>
@@ -14,11 +15,11 @@ const Header = () => (
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav>
-            <Nav.Link href="/rockets">Rockets</Nav.Link>
-            <Nav.Link href="/missions">Missions</Nav.Link>
+          <Nav ClassName="nav-link">
+            <NavLink to="/rockets">Rockets</NavLink>
+            <NavLink to="/missions">Missions</NavLink>
             <div className="line" />
-            <Nav.Link href="/profile">My Profile</Nav.Link>
+            <NavLink to="/profile">My Profile</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,4 +1,4 @@
-const url = 'https://api.spacexdata.com/v3/rockets';
+export const url = 'https://api.spacexdata.com/v3/rockets';
 
 const GET_ROCKETS = 'GET_ROCKETS';
 const RESERVE_ROCKET = 'RESERVE_ROCKET';
