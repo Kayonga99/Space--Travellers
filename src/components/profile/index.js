@@ -9,12 +9,14 @@ function Profile() {
   /* eslint-enable */
   return (
     <div className={Css.Profile}>
-      <h3 className={Css.h3}>Reserved Rockets</h3>
-      {rockets.map((rocket) => (
-        <div key={rocket.id}>
-          <h3>{rocket.name}</h3>
-        </div>
-      ))}
+      <div className={Css.DivSep}>
+        <h3 className={Css.h3}>Reserved Rockets</h3>
+        {rockets.map((rocket) => (
+          <div className={Css.profileDiv} key={rocket.id}>
+            <li>{rocket.name}</li>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,19 @@
 .Profile {
     display: flex;
-    justify-content: flex-end;
     margin-right: 10px;
+    justify-content: flex-end;
     font-family: sans-serif;
+
 }
 
+.DivSep {
+display: flex;
+flex-direction: column;
+}
+
+.profileDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
