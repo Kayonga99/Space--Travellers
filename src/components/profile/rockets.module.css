@@ -16,4 +16,14 @@ flex-direction: column;
     justify-content: center;
     flex-direction: column;
 }
+
+.liRocket {
+    font-size: 20px;
+    font-weight: 500;
+    list-style: none;
+}
+
+.h3 {
+    font-weight: 800;
+}
  

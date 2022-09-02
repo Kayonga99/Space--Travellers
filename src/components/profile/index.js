@@ -13,7 +13,7 @@ function Profile() {
         <h3 className={Css.h3}>Reserved Rockets</h3>
         {rockets.map((rocket) => (
           <div className={Css.profileDiv} key={rocket.id}>
-            <li>{rocket.name}</li>
+            <lin className={Css.liRocket}>{rocket.name}</lin>
           </div>
         ))}
       </div>
