@@ -14,8 +14,8 @@ const Header = () => (
           <h2> Space Travelers&rsquo;Hub</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav ClassName="NavLinkS">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end NavLinkS">
+          <Nav>
             <NavLink to="/rockets">Rockets</NavLink>
             <NavLink to="/missions">Missions</NavLink>
             <div className="line">|</div>
