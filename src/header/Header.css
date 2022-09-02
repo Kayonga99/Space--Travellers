@@ -10,7 +10,7 @@
   gap: 0.5em;
 }
 
-.nav-link {
+.NavLinkS {
   display: inline-flex;
   gap: 5em; 
   justify-content: flex-end;
