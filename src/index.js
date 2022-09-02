@@ -17,3 +17,5 @@ root.render(
   </Router>
   ,
 );
+
+ReactDOM.render(<App />, document.getElementById('main-root'));
