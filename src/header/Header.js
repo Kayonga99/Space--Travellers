@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -14,10 +15,10 @@ const Header = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
-          <Nav.Link href="/rockets">Rockets</Nav.Link>
-          <Nav.Link href="/missions">Missions</Nav.Link>
+          <NavLink to="/rockets">Rockets</NavLink>
+          <NavLink to="/missions">Missions</NavLink>
           <div className="line" />
-          <Nav.Link href="/profile">My Profile</Nav.Link>
+          <NavLink to="/profile">My Profile</NavLink>
         </Nav>
       </Navbar.Collapse>
     </Container>

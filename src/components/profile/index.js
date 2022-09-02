@@ -1,7 +1,13 @@
-import React from 'react';
+// import React, { useEffect } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+import JoinedMission from './joinedMission';
+// import { displayJoinedMissionsAction } from '../../redux/missions/missionsSlice';
 
 const Profile = () => (
-  <h1>Profile in progress</h1>
+  <>
+    <div>Profile</div>
+    <JoinedMission />
+  </>
 );
 
 export default Profile;
