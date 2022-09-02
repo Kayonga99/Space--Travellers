@@ -79,7 +79,7 @@ const rocketReducer = (state = initialState, action) => {
     case CANCEL_REVERATION: {
       const cancelState = state.rockets.map((rocket) => {
         if (rocket.id === action.payload) {
-          return { ...rocket, reserved: !rocket.reserved };
+          return { ...rocket, reserved: true };
         }
         return rocket;
       });
