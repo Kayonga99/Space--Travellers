@@ -1,13 +1,15 @@
 .Profile {
   display: flex;
-  margin-right: 20px;
-  justify-content: flex-end;
   font-family: sans-serif;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .DivSep {
   display: flex;
   flex-direction: column;
+  width: 40vw;
 }
 
 .profileDiv {
@@ -21,9 +23,7 @@
   font-weight: 500;
   list-style: none;
   border: 0.5px solid #6e6d6d;
-  width: 30em;
   padding: 12px;
-  margin-right: 40px;
 }
 
 .h3 {

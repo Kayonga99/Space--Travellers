@@ -3,6 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 // Action types
 const GET_MISSIONS = 'missions/GET_MISSIONS';
 const SWITCH_JOIN = 'missions/SWITCH_JOIN';
+const DISPLAY_JOINED = 'missions/DISPLAY_JOINED';
 
 // Initial State
 const initialState = {
@@ -16,6 +17,11 @@ const switchReserved = (state, id) => state.missions.map((mission) => {
 });
 
 const missionsReducer = (state = initialState, action) => {
+  console.log('action.type');
+  console.log(action.type);
+  console.log('[...state.missions]');
+  console.log([...state.missions]);
+
   switch (action.type) {
     case `${GET_MISSIONS}/pending`:
       return {
@@ -30,6 +36,11 @@ const missionsReducer = (state = initialState, action) => {
     case `${SWITCH_JOIN}`:
       return {
         missions: switchReserved(state, action.payload),
+        status: 'Mission join switched successfully',
+      };
+    case DISPLAY_JOINED:
+      return {
+        missions: [...state.missions],
         status: 'Mission join switched successfully',
       };
     default:
@@ -56,5 +67,7 @@ export const getMissionsAction = createAsyncThunk(GET_MISSIONS, async () => {
 });
 
 export const switchMissionAction = (id) => ({ type: SWITCH_JOIN, payload: id });
+
+export const displayJoinedMissionsAction = () => ({ type: DISPLAY_JOINED });
 
 export default missionsReducer;
