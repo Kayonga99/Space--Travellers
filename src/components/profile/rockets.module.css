@@ -1,0 +1,31 @@
+.Profile {
+  display: flex;
+  font-family: sans-serif;
+  margin-top: 5rem;
+  justify-content: center;
+  gap:2rem
+}
+
+.DivSep {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.profileDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.liRocket {
+  font-size: 20px;
+  font-weight: 500;
+  list-style: none;
+  border: 0.5px solid #6e6d6d;
+  padding: 12px;
+}
+
+.h3 {
+  font-weight: 800;
+}

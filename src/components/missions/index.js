@@ -8,11 +8,12 @@ import { getMissionsAction, switchMissionAction } from '../../redux/missions/mis
 
 const Missions = () => {
   const missionState = useSelector((state) => state.missions.missions);
-
+  console.log('missionState');
+  console.log(missionState);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!missionState) {
+    if (missionState.length === 0) {
       dispatch(getMissionsAction());
     }
   }, []);

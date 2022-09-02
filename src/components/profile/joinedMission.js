@@ -10,7 +10,7 @@ const JoinedMission = () => {
   }, []);
 
   console.log('JoinedMission');
-  console.log(missionJoined.filter((mission) => mission.joined));
+  console.log([] || missionJoined.filter((mission) => mission.joined));
   return (
     <div>joinedMission</div>
   );
