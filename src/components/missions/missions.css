@@ -35,5 +35,7 @@ tr:nth-child(even) {
 .leaveBtn {
   color: red;
   border-color: red;
+  padding: 5px;
+  width: 120px;
   background-color: transparent;
   }
