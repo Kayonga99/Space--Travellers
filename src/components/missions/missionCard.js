@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Mission = (props) => {
+const MissionCard = (props) => {
   const { mission, handleClick } = props;
   const {
     missionId, missionName, description, joined,
@@ -31,13 +31,13 @@ const Mission = (props) => {
   );
 };
 
-export default Mission;
+export default MissionCard;
 
-Mission.propTypes = {
+MissionCard.propTypes = {
   mission: PropTypes.func.isRequired,
   handleClick: PropTypes.func,
 };
 
-Mission.defaultProps = {
+MissionCard.defaultProps = {
   handleClick: () => { },
 };

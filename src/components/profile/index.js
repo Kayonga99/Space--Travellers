@@ -4,7 +4,6 @@ import Css from './rockets.module.css';
 import { displayJoinedMissionsAction } from '../../redux/missions/missionsSlice';
 
 const Profile = () => {
-  /* Missions */
   const state = useSelector((state) => state);
   const missionJoined = state.missions.missions.filter((mission) => mission.joined);
   const dispatch = useDispatch();
@@ -12,16 +11,13 @@ const Profile = () => {
     dispatch(displayJoinedMissionsAction());
   }, []);
 
-  console.log('missionJoined');
-  console.log(missionJoined);
-
   /* eslint-disable */ 
   const rockets = state.rockets.rockets.filter(rocket => rocket.reserved);
 
   /* eslint-enable */
   return (
     <div className={Css.Profile}>
-
+      {/* My missions */}
       <div className={Css.DivSep}>
         <h3 className={Css.h3}>My Missions</h3>
         {missionJoined.map((mission) => (
@@ -30,6 +26,7 @@ const Profile = () => {
           </div>
         ))}
       </div>
+      {/* My Rockets */}
       <div className={Css.DivSep}>
         <h3 className={Css.h3}>Myt Rockets</h3>
         {rockets.map((rocket) => (

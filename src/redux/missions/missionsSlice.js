@@ -17,11 +17,6 @@ const switchReserved = (state, id) => state.missions.map((mission) => {
 });
 
 const missionsReducer = (state = initialState, action) => {
-  console.log('action.type');
-  console.log(action.type);
-  console.log('[...state.missions]');
-  console.log([...state.missions]);
-
   switch (action.type) {
     case `${GET_MISSIONS}/pending`:
       return {
