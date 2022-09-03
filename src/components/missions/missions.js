@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { useSelector, useDispatch } from 'react-redux';
-import Mission from './mission';
+import MissionCard from './missionCard';
 import './missions.css';
 
 import { getMissionsAction, switchMissionAction } from '../../redux/missions/missionsSlice';
 
 const Missions = () => {
   const missionState = useSelector((state) => state.missions.missions);
-  console.log('missionState');
-  console.log(missionState);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -35,7 +33,7 @@ const Missions = () => {
       <tbody>
 
         {missionState.map((mission) => (
-          <Mission
+          <MissionCard
             handleClick={handleClick}
             key={mission.missionId}
             mission={mission}
