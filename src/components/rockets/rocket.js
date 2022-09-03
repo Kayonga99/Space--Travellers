@@ -24,7 +24,7 @@ const Rockets = () => {
           <div>
             <h3>{rocket.name}</h3>
             <p>{rocket.description}</p>
-            {rocket.reserved ? <button className="button" type="button" id={rocket.id} onClick={(e) => cancelReseve(e.target.id)}>cancel</button> : <button className="button" type="button" id={rocket.id} onClick={(e) => handleReserve(e.target.id)}>Reserve</button>}
+            {rocket.reserved ? <button className="button" type="button" id={rocket.id} onClick={(e) => cancelReseve(e.target.id)}>cancel</button> : <button className="button" type="button" id={rocket.id} onClick={(e) => handleReserve(e.target.id)}>Reserve Rocket</button>}
           </div>
 
         </div>
