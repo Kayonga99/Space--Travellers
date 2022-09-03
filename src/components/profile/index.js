@@ -12,9 +12,6 @@ const Profile = () => {
     dispatch(displayJoinedMissionsAction());
   }, []);
 
-  console.log('missionJoined');
-  console.log(missionJoined);
-
   /* eslint-disable */ 
   const rockets = state.rockets.rockets.filter(rocket => rocket.reserved);
 
@@ -31,7 +28,7 @@ const Profile = () => {
         ))}
       </div>
       <div className={Css.DivSep}>
-        <h3 className={Css.h3}>Myt Rockets</h3>
+        <h3 className={Css.h3}>My Rockets</h3>
         {rockets.map((rocket) => (
           <div className={Css.profileDiv} key={rocket.id}>
             <lin className={Css.liRocket}>{rocket.name}</lin>
