@@ -21,7 +21,7 @@ const Profile = () => {
         <h3 className={Css.h3}>My Missions</h3>
         {missionJoined.map((mission) => (
           <div className={Css.profileDiv} key={mission.missionId}>
-            <lin className={Css.liRocket}>{mission.missionName}</lin>
+            <div className={Css.liRocket}>{mission.missionName}</div>
           </div>
         ))}
       </div>
@@ -30,7 +30,7 @@ const Profile = () => {
         <h3 className={Css.h3}>My Rockets</h3>
         {rockets.map((rocket) => (
           <div className={Css.profileDiv} key={rocket.id}>
-            <lin className={Css.liRocket}>{rocket.name}</lin>
+            <div className={Css.liRocket}>{rocket.name}</div>
           </div>
         ))}
       </div>
