@@ -29,10 +29,11 @@ tr:nth-child(even) {
 
 .joinBtn {
   background-color: transparent;
+  width: 117px;
 }
 
 .leaveBtn {
   color: red;
   border-color: red;
   background-color: transparent;
-}
+  }
