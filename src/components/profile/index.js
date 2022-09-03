@@ -14,7 +14,6 @@ const Profile = () => {
   /* eslint-disable */ 
   const rockets = state.rockets.rockets.filter(rocket => rocket.reserved);
 
-  /* eslint-enable */
   return (
     <div className={Css.Profile}>
       {/* My missions */}
@@ -28,7 +27,7 @@ const Profile = () => {
       </div>
       {/* My Rockets */}
       <div className={Css.DivSep}>
-        <h3 className={Css.h3}>Myt Rockets</h3>
+        <h3 className={Css.h3}>My Rockets</h3>
         {rockets.map((rocket) => (
           <div className={Css.profileDiv} key={rocket.id}>
             <lin className={Css.liRocket}>{rocket.name}</lin>
