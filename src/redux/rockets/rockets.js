@@ -2,7 +2,7 @@ export const url = 'https://api.spacexdata.com/v3/rockets';
 
 const GET_ROCKETS = 'GET_ROCKETS';
 const RESERVE_ROCKET = 'RESERVE_ROCKET';
-const CANCEL_REVERATION = 'CANCEL_REVERATION';
+const CANCEL_RESERVATION = 'CANCEL_REVERATION';
 const FETCHING_ROCKETS_FAILED = 'FETCHING_ROCKETS_FAILED';
 
 const initialState = {
@@ -20,7 +20,7 @@ export const reserve = (id) => ({
 });
 
 export const cancelResevertion = (id) => ({
-  type: CANCEL_REVERATION,
+  type: CANCEL_RESERVATION,
   payload: id,
 });
 
@@ -76,14 +76,14 @@ const rocketReducer = (state = initialState, action) => {
       });
       return { ...state, rockets: currentState };
     }
-    case CANCEL_REVERATION: {
+    case CANCEL_RESERVATION: {
       const cancelState = state.rockets.map((rocket) => {
         if (rocket.id === action.payload) {
           return { ...rocket, reserved: !rocket.reserved };
         }
         return rocket;
       });
-      return { ...state, rocket: cancelState };
+      return { ...state, rockets: cancelState };
     }
     default:
       return state;

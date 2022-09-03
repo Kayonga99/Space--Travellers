@@ -12,10 +12,9 @@ const Profile = () => {
     dispatch(displayJoinedMissionsAction());
   }, []);
 
-  /* eslint-disable */ 
-  const rockets = state.rockets.rockets.filter(rocket => rocket.reserved);
+  /* Missions */
+  const rockets = state.rockets.rockets.filter((rocket) => rocket.reserved);
 
-  /* eslint-enable */
   return (
     <div className={Css.Profile}>
 
