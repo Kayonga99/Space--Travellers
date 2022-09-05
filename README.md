@@ -29,8 +29,8 @@ npm start
 npm test
 ### Deployment
 
-Deployment [link](https://space-travelers-mehdi-rh.netlify.app/)
-Guideline used for [deployment](https://stackabuse.com/guide-to-deploying-a-react-app-to-netlify/)
+* Deployment [link](https://space-travelers-mehdi-rh.netlify.app/)
+* Guideline used for [deployment](https://stackabuse.com/guide-to-deploying-a-react-app-to-netlify/)
 
 
 ## Authors
