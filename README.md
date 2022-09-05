@@ -16,7 +16,7 @@ In this project, we will be working with the real live data from the SpaceX API.
 
 ## Live Demo
 
-[Live Demo Link](https://space-travelers-mehdi-rh.netlify.app/)
+[Live Demo Link](space-travelers-mehdirh-kayonga99.netlify.app)
 
 
 ## Getting Started
@@ -29,7 +29,7 @@ npm start
 npm test
 ### Deployment
 
-* Deployment [link](https://space-travelers-mehdi-rh.netlify.app/)
+* Deployment [link](space-travelers-mehdirh-kayonga99.netlify.app)
 * Guideline used for [deployment](https://stackabuse.com/guide-to-deploying-a-react-app-to-netlify/)
 
 
